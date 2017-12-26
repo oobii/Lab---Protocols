@@ -26,7 +26,7 @@ static func ==(lhs: Employee, rhs: Employee) -> Bool {
 }
 ```
   
-#### Comparale<br>
+#### Comparable<br>
 **Comparable** has two requirements: It requires that the type has adopted the **Equatable** protocol, and it requires the developer to implement the **<** operator—which will return a Bool for whether the left-hand value is less than the right-hand value.
 
 ```swift
