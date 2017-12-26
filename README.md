@@ -1,7 +1,7 @@
-# Lab---Protocols
+####Lab---Protocols
 Protocols<br>
 Examples of Protocols:
-- CustomStringConvertibl
+- CustomStringConvertible
 - Equatable
 - Comparable
 
