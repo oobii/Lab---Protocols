@@ -20,8 +20,8 @@ Fot custom type, you must tell Swift exactly how to compare two instances for eq
 The Equatable protocol requires you to provide an implementation for the **==** operator for your custom type. It adds a static == function that takes lhs (left-hand side) and rhs (right-hand side) parameters and returns a Bool that says whether the two values are equal
 ```swift
 static func ==(lhs: Employee, rhs: Employee) -> Bool {
-  // Logic that determines whether the value on the left hand
-  side and right hand side are equal.
+  return lhs.firstName == rhs.firstName && lhs.lastName ==
+  rhs.lastName
 }
 ```
 
@@ -30,6 +30,17 @@ static func ==(lhs: Employee, rhs: Employee) -> Bool {
 ##### Comparale<br>
 **Comparable** has two requirements: It requires that the type has adopted the **Equatable** protocol, and it requires the developer to implement the **<** operator—which will return a Bool for whether the left-hand value is less than the right-hand value.
 
+```swift
+static func ==(lhs: Employee, rhs: Employee) -> Bool {
+    return lhs.firstName == rhs.firstName && lhs.lastName ==
+    rhs.lastName && lhs.jobTitle == rhs.jobTitle && 
+    lhs.phoneNumber == rhs.phoneNumber
+}
+ 
+static func < (lhs: Employee, rhs: Employee) -> Bool {
+    return lhs.lastName < rhs.lastName
+}
+```
 
 
 
